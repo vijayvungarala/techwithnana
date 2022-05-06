@@ -1,0 +1,10 @@
+ docker run -d -p 8080:8080 -p 50000:50000 \
+> -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+
+docker exec -it 080bfda0563d bash
+
+cat /var/jenkins_home/secrets/initialAdminPassword
+
+docker volume inspect jenkins_home
+
+docker exec -u 0 -it 080bfda0563d bash
